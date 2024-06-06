@@ -9,8 +9,8 @@ type VerifyUserRequest struct {
 }
 
 type NotifyUserRequest struct {
-	PhoneNumber string
-	Steps       []string
+	UserID string
+	Steps  StepsStore
 }
 
 type WaitDriverRequest struct {

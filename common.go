@@ -9,6 +9,9 @@ type StepsStore []Step
 
 func (s StepsStore) StartNextStage() {
 	for _, step := range s {
+		if step.Progress == "in_progress" {
+			step.Progress = "completed"
+		}
 		if step.Progress == "not_started" {
 			step.Progress = "in_progress"
 			break
@@ -18,7 +21,7 @@ func (s StepsStore) StartNextStage() {
 
 func (s StepsStore) FailPresentStage() {
 	for _, step := range s {
-		if step.Progress == "in_progress" {
+		if step.Progress != "completed" {
 			step.Progress = "failed"
 			break
 		}

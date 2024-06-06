@@ -1,7 +1,10 @@
 package commonstructs
 
 type FetchUserDetailsResponse struct {
-	UserID string
+	UserID      string
+	Name        string
+	Email       string
+	PhoneNumber string
 }
 
 type VerifyUserResponse struct {

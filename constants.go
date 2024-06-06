@@ -15,3 +15,7 @@ const (
 	VerifyUserActivity       = "VerifyUserActivity"
 	FetchUserDetailsActivity = "FetchUserDetailsActivity"
 )
+
+const (
+	AssignDriverWorkflow = "AssignDriverWorkflow"
+)
