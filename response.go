@@ -8,11 +8,6 @@ type VerifyUserResponse struct {
 	UserID string
 }
 
-type Step struct {
-	Progress string
-	Error    error
-}
-
 type NotifyUserResponse struct{}
 
 type MatchDriverResponse struct{}
