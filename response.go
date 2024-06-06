@@ -20,3 +20,7 @@ type MatchDriverResponse struct{}
 type WaitDriverResponse struct {
 	Accept bool
 }
+
+type AssignDriverWorkflowResponse struct {
+	UserID string
+}

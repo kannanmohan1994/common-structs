@@ -22,3 +22,8 @@ type MatchDriverRequest struct {
 	UserID       string
 	UserLocation string
 }
+
+type AssignDriverWorkflowRequest struct {
+	UserID   string
+	Location string
+}
