@@ -13,7 +13,7 @@ type Step struct {
 	Error    error
 }
 
-type NotifyUserResponse struct{ Steps []Step }
+type NotifyUserResponse struct{}
 
 type MatchDriverResponse struct{}
 
