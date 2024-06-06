@@ -7,3 +7,11 @@ const (
 	TaskQueueVerifyUserActivity       = "TASK_QUEUE_VERIFY_USER"
 	TaskQueueFetchUserDetailsActivity = "TASK_QUEUE_FETCH_USER_DETAILS"
 )
+
+const (
+	MatchDriverActivity      = "MatchDriverActivity"
+	WaitDriverActivity       = "WaitDriverActivity"
+	NotifyUserActivity       = "NotifyUserActivity"
+	VerifyUserActivity       = "VerifyUserActivity"
+	FetchUserDetailsActivity = "FetchUserDetailsActivity"
+)
