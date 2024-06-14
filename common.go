@@ -8,31 +8,41 @@ type Step struct {
 type StepsStore []Step
 
 func (s StepsStore) StartNextStage() {
-	for _, step := range s {
-		if step.Progress == "in_progress" {
-			step.Progress = "completed"
+	for idx := range s {
+		if s[idx].Progress == "in_progress" {
+			s[idx].Progress = "completed"
 		}
-		if step.Progress == "not_started" {
-			step.Progress = "in_progress"
+		if s[idx].Progress == "not_started" {
+			s[idx].Progress = "in_progress"
 			break
 		}
 	}
 }
 
 func (s StepsStore) FailPresentStage() {
-	for _, step := range s {
-		if step.Progress != "completed" {
-			step.Progress = "failed"
+	for idx := range s {
+		if s[idx].Progress != "completed" {
+			s[idx].Progress = "failed"
 			break
 		}
 	}
 }
 
 func (s StepsStore) CompletePresentStage() {
-	for _, step := range s {
-		if step.Progress == "in_progress" {
-			step.Progress = "completed"
+	for idx := range s {
+		if s[idx].Progress == "in_progress" {
+			s[idx].Progress = "completed"
 			break
+		}
+	}
+}
+
+func (s StepsStore) MoveToStep(step int) {
+	for idx := range s {
+		if idx < step {
+			s[idx].Progress = "completed"
+		} else {
+			s[idx].Progress = "not_started"
 		}
 	}
 }
